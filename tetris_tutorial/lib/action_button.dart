@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
-import 'game.dart';
-
-
+import 'settings.dart';
 
 class ActionButton extends StatelessWidget{
-  Function onClickedFunction;
-  Icon buttonIcon;
-  LastButtonPressed nextAction;
+  final Function onClickedFunction;
+  final Icon buttonIcon;
+  final LastButtonPressed nextAction;
 
+   const ActionButton(this.onClickedFunction, this.buttonIcon, this.nextAction, {super.key});
 
-  ActionButton(this.onClickedFunction, this.buttonIcon, this.nextAction);
-
+  @override
   Widget build(BuildContext context){
     return SizedBox(
       height: 60,
       width: 200,
-      child: Padding(padding: EdgeInsets.all(20),
+      child: Padding(padding: EdgeInsets.all(5),
       child: ElevatedButton(
           onPressed: () {
             onClickedFunction(nextAction);

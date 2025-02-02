@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MenuButton extends StatelessWidget {
-  Function onClickedFunction;
+  final Function onClickedFunction;
 
-  MenuButton(this.onClickedFunction);
+  const MenuButton(this.onClickedFunction, {super.key});
 
   @override
   Widget build(BuildContext context) {
